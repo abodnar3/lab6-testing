@@ -8,7 +8,8 @@ def test_sample_run_anonymizer():
 
     result = sample_run_anonymizer(text, start, end)
 
-    assert start in result
-    assert end in result
-    assert text in result
+    assert result["start"] == start
+    assert result["end"] == end
+    assert result["original_length"] == len(text)
+    assert result["anonymized"] == "My name is ****."
     pass
