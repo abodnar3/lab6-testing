@@ -29,11 +29,6 @@ def sample_run_anonymizer(text: str, start: int, end: int):
     # ]
 
 if __name__ == "__main__": 
-    text_input = "My name is Bond."
-    start_input = 11
-    end_input = 15
-
-    anonymization_result = sample_run_anonymizer(text_input, start_input, end_input)
-
+    anonymization_result = sample_run_anonymizer("My name is Bond.", 11, 15)
     print(anonymization_result)
 
