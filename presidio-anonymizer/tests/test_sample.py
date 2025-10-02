@@ -8,8 +8,7 @@ def test_sample_run_anonymizer():
 
     result = sample_run_anonymizer(text, start, end)
 
-    assert isinstance(result, dict)
-    assert "text" in result
-    assert "items" in result
-    assert isinstance(result["items"], list)
+    assert start in result
+    assert end in result
+    assert text in result
     pass
