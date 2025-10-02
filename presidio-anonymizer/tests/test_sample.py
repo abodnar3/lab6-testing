@@ -12,7 +12,4 @@ def test_sample_run_anonymizer():
     assert "text" in result
     assert "items" in result
     assert isinstance(result["items"], list)
-
-def test_sample_run_anonymizer():
-    # replace the following line with your test
     pass
