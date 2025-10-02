@@ -8,8 +8,16 @@ def test_sample_run_anonymizer():
 
     result = sample_run_anonymizer(text, start, end)
 
-    assert result["start"] == start
-    assert result["end"] == end
-    assert result["original_length"] == len(text)
-    assert result["anonymized"] == "My name is ****."
+    assert result["text"] == "My name is BIP."
+
+    assert "items" in result
+    assert len(result["items"]) == 1
+
+    item = result["items"][0]
+
+    assert item["start"] == 11
+    assert item["end"] == 14
+    assert item["entity_type"] == "PERSON"
+    assert item["text"] == "BIP"
+    assert item["operator"] == "replace"
     pass
