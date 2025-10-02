@@ -35,3 +35,5 @@ if __name__ == "__main__":
 
     anonymization_result = sample_run_anonymizer(text_input, start_input, end_input)
 
+    print(anonymization_result)
+
